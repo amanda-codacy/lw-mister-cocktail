@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <h1><%= @cocktail.name %></h1>
+      <% @cocktail.doses.each do |dose| %>
+        <div><%= dose.ingredient.name %> - <%= dose.desc %></div>
+      <% end %>
+      <div><%= link_to 'Back', cocktails_path %></div>
+      <div><%= link_to 'Add Dose', new_cocktail_dose_path(@cocktail) %></div>
+    </div>
+  </div>
+</div>
